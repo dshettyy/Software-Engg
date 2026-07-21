@@ -1,33 +1,41 @@
+# RNN sentiment analysis on movie reviews
+
 from keras.datasets import imdb
-
 from keras.preprocessing.text import Tokenizer
-
-from keras.utils import pad sequences
-
+from keras.utils import pad_sequences
 from keras import Sequential
+from keras.layers import Dense, SimpleRNN, Embedding, Flatten
 
-from keras.layers import
+(X_train, y_train), (X_test, y_test) = imdb.load_data()
 
-Dense, SimpleRNN, Embedding, Flatten (X_train, y train), (X test
+X_train = pad_sequences(X_train, padding='post', maxlen=50)
+X_test = pad_sequences(X_test, padding='post', maxlen=50)
 
-y_test) = imdb.load data() X train =
+X_train.shape
 
-pad sequences (X train, padding='post', maxlen=50)
+model = Sequential()
 
-pad sequences (X test, padding='post', maxlen=50)
+# model.add(Embedding(10000, 2))
 
-X train.shape
+model.add(SimpleRNN(32, input_shape=(50, 1), return_sequences=False))
+model.add(Dense(1, activation='sigmoid'))
 
-model Sequential ()
+model.summary()
 
-#model.add (Embedding (10000, 2))
+model.compile(
+    optimizer='adam',
+    loss='binary_crossentropy',
+    metrics=['acc']
+)
 
-model.add (SimpleRNN (32, input shape= (50, 1),
+model.fit(
+    X_train,
+    y_train,
+    epochs=5,
+    validation_data=(X_test, y_test)
+)
 
-model.add (Dense (1, activation='sigmoid'))
+test_loss, test_acc = model.evaluate(X_test, y_test)
 
-model. summary ()
-
-model.compile (optimizer='adam', loss='binary crossentropy', metrics=('acc')) model. fit (X train, y train, epochs=5, validation data=(X test,y test)) test loss, test acc = model.evaluate (X test, y test) print ('Test loss', test loss)
-
-print ('Test accuracy', test acc)
+print('Test loss', test_loss)
+print('Test accuracy', test_acc)
