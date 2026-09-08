@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="WVYIjs0AXukRVvIGcKwE">
+    <mxGraphModel dx="1094" dy="541" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-1" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Book" vertex="1">
+          <mxGeometry height="230" width="260" x="70" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-2" parent="SOew-kuPCZ2MSVHw0Tmi-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;ul&gt;&lt;li&gt;bookId: int&lt;/li&gt;&lt;li&gt;bookTitle: string&lt;/li&gt;&lt;li&gt;authorName: string&lt;/li&gt;&lt;li&gt;publisher: string&lt;/li&gt;&lt;li&gt;catrhoty: string&lt;/li&gt;&lt;li&gt;quantity: int&lt;/li&gt;&lt;li&gt;availableCopies: int&lt;/li&gt;&lt;/ul&gt;" vertex="1">
+          <mxGeometry height="40" width="190" x="-10" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-4" edge="1" parent="SOew-kuPCZ2MSVHw0Tmi-1" style="shape=link;html=1;rounded=0;width=6;" value="">
+          <mxGeometry relative="1" width="100" as="geometry">
+            <mxPoint y="150" as="sourcePoint" />
+            <mxPoint x="260" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-5" parent="SOew-kuPCZ2MSVHw0Tmi-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="+addBook():void&lt;div&gt;+updateBook(): void&lt;/div&gt;&lt;div&gt;+deleteBook(): void&lt;/div&gt;&lt;div&gt;+checkAvailability(): bool&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="210" x="20" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-8" edge="1" parent="SOew-kuPCZ2MSVHw0Tmi-1" source="SOew-kuPCZ2MSVHw0Tmi-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="SOew-kuPCZ2MSVHw0Tmi-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-10" parent="1" style="swimlane;whiteSpace=wrap;html=1;" value="Member" vertex="1">
+          <mxGeometry height="230" width="260" x="550" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-12" edge="1" parent="SOew-kuPCZ2MSVHw0Tmi-10" style="shape=link;html=1;rounded=0;width=6;" value="">
+          <mxGeometry relative="1" width="100" as="geometry">
+            <mxPoint y="150" as="sourcePoint" />
+            <mxPoint x="260" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SOew-kuPCZ2MSVHw0Tmi-14" edge="1" parent="SOew-kuPCZ2MSVHw0Tmi-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="85" y="100" as="sourcePoint" />
+            <mxPoint x="85" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
